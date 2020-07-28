@@ -8,6 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 //Import Routes
 app.use('/user', require('./routes/user'));
 app.use('/chatroom', require('./routes/chatroom'));
+app.use('/verify', require('./routes/verify'));
 
 //Setup Error Handlers
 const errorHandlers = require('./handlers/errorHandlers');
