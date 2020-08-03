@@ -5,13 +5,6 @@ const jwt = require('jsonwebtoken');
 
 exports.signup = async (req, res) => {
     const { name, phone, password } = req.body;
-
-    const userExists = await User.findOne({
-        phone,
-    });
-
-    if(userExists) throw "User with same phone number already exists!";
-
     const user = new User({ 
         name, 
         phone, 
